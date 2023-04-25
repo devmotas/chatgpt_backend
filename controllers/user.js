@@ -1,7 +1,7 @@
 import { db } from '../db.js';
 
 export const getUsers = (_, res) => {
-  const q = "SELECT * FROM users WHERE deleted_time IS NULL"
+  const q = "SELECT * FROM users-chatgpt WHERE deleted_time IS NULL"
 
   db.query(q, (err, data) => {
     if (err) return res.json(err)
@@ -18,7 +18,7 @@ export const getUsers = (_, res) => {
 
 
 export const addUser = (req, res) => {
-  const q = "INSERT INTO users (name, email, password) VALUES (?)"
+  const q = "INSERT INTO users-chatgpt (name, email, password) VALUES (?)"
   const values = [
     req.body.name,
     req.body.email,
@@ -32,7 +32,7 @@ export const addUser = (req, res) => {
 }
 
 export const updateUser = (req, res) => {
-  const q = "UPDATE users SET name=?, email=?, password=? WHERE id=?"
+  const q = "UPDATE users-chatgpt SET name=?, email=?, password=? WHERE id=?"
   const values = [
     req.body.name,
     req.body.email,
@@ -46,7 +46,7 @@ export const updateUser = (req, res) => {
 }
 
 export const deleteUser = (req, res) => {
-  const q = "UPDATE users SET deleted_time=? WHERE id=?"
+  const q = "UPDATE users-chatgpt SET deleted_time=? WHERE id=?"
   const currentTime = new Date().toISOString()
   const values = [
     currentTime
