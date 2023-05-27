@@ -15,7 +15,7 @@ exports.login = (req, res) => {
 
   db.query(q, values, (err, results) => {
     if (err) {
-      return res.status(500).json({message: "Ocorreu um erro ao tentar fazer login."});
+      return res.status(500).json({message: "Ocorreu um erro ao tentar fazer login.", erro: err});
     }
 
     if (results.length === 0) {
