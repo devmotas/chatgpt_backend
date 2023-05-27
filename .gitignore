@@ -1,4 +1,9 @@
-  .env
   node_modules/
   .DS_Store
 
+  .env
+  .env.example
+  .env.production
+functions/.env
+functions/.env.example
+functions/.env.production
