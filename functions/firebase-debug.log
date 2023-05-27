@@ -1,145 +1,0 @@
-[debug] [2023-05-26T23:55:31.518Z] ----------------------------------------------------------------------
-[debug] [2023-05-26T23:55:31.521Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gusta\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
-[debug] [2023-05-26T23:55:31.522Z] CLI Version:   11.28.0
-[debug] [2023-05-26T23:55:31.522Z] Platform:      win32
-[debug] [2023-05-26T23:55:31.522Z] Node Version:  v18.15.0
-[debug] [2023-05-26T23:55:31.524Z] Time:          Fri May 26 2023 20:55:31 GMT-0300 (Horário Padrão de Brasília)
-[debug] [2023-05-26T23:55:31.524Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-05-26T23:55:31.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-05-26T23:55:31.721Z] > authorizing via signed-in user (gustavophilippem@gmail.com)
-[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
-[debug] [2023-05-26T23:55:31.757Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-05-26T23:55:31.758Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-05-26T23:55:31.783Z] [hub] writing locator at C:\Users\gusta\AppData\Local\Temp\hub-chatgptbackend.json
-[debug] [2023-05-26T23:55:31.834Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-05-26T23:55:31.834Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-05-26T23:55:31.834Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
-[debug] [2023-05-26T23:55:31.859Z] defaultcredentials: writing to file C:\Users\gusta\AppData\Roaming\firebase\gustavophilippem_gmail_com_application_default_credentials.json
-[debug] [2023-05-26T23:55:31.883Z] Setting GAC to C:\Users\gusta\AppData\Roaming\firebase\gustavophilippem_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\gusta\\AppData\\Roaming\\firebase\\gustavophilippem_gmail_com_application_default_credentials.json"}}
-[debug] [2023-05-26T23:55:31.888Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatgptbackend/adminSdkConfig [none]
-[debug] [2023-05-26T23:55:32.304Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatgptbackend/adminSdkConfig 200
-[debug] [2023-05-26T23:55:32.304Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatgptbackend/adminSdkConfig {"projectId":"chatgptbackend","storageBucket":"chatgptbackend.appspot.com"}
-[debug] [2023-05-26T23:55:32.358Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-05-26T23:55:32.359Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-05-26T23:55:32.360Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\gusta\\.cache\\firebase\\emulators\\ui-v1.11.5\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\gusta\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.5\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-05-26T23:55:32.670Z] Web / API server started at 127.0.0.1:4000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2023-05-26T23:55:32.671Z] Web / API server started at ::1:4000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
-[info] i  functions: Watching "C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\" for Cloud Functions..."}}
-[debug] [2023-05-26T23:55:32.918Z] Validating nodejs source
-[debug] [2023-05-26T23:55:36.161Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "eslint .",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "axios": "^1.4.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.22"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-05-26T23:55:36.162Z] Building nodejs source
-[debug] [2023-05-26T23:55:36.162Z] Failed to find version of module node: reached end of search path C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules
-[info] +  functions: Using node@18 from host. 
-[debug] [2023-05-26T23:55:36.166Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-05-26T23:55:36.179Z] Found firebase-functions binary at 'C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-05-26T23:55:36.725Z] Serving at port 8745
-
-[debug] [2023-05-26T23:55:37.478Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-05-26T23:55:37.491Z] shutdown requested via /__/quitquitquit
-
-[info] +  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
-[info] +  functions[us-central1-app]: http function initialized (http://127.0.0.1:5001/chatgptbackend/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/chatgptbackend/us-central1/app)."}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:4000/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌───────────┬────────────────┬─────────────────────────────────┐
-│ Emulator  │ Host:Port      │ View in Emulator UI             │
-├───────────┼────────────────┼─────────────────────────────────┤
-│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
-└───────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[debug] [2023-05-26T23:55:40.687Z] [work-queue] {"queuedWork":["/chatgptbackend/us-central1/app/get-users-2023-05-26T23:55:40.687Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-05-26T23:55:40.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/chatgptbackend/us-central1/app/get-users-2023-05-26T23:55:40.687Z"],"workRunningCount":1}
-[debug] [2023-05-26T23:55:40.688Z] Accepted request GET /chatgptbackend/us-central1/app/get-users --> us-central1-app
-[debug] [2023-05-26T23:55:40.693Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-05-26T23:55:40.694Z] [functions] Got req.url=/chatgptbackend/us-central1/app/get-users, mapping to path=/get-users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chatgptbackend/us-central1/app/get-users, mapping to path=/get-users"}}
-[debug] [2023-05-26T23:55:40.712Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
-[debug] [2023-05-26T23:55:40.713Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
-[debug] [2023-05-26T23:55:43.582Z] [runtime-status] [21856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:43.585Z] [runtime-status] [21856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:43.586Z] [runtime-status] [21856] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2023-05-26T23:55:43.589Z] [runtime-status] [21856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:44.144Z] [runtime-status] [21856] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Checked functions.config() {\"config\":{}}"}}
-[debug] [2023-05-26T23:55:44.144Z] [runtime-status] [21856] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
-[debug] [2023-05-26T23:55:44.146Z] [runtime-status] [21856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:44.150Z] [runtime-status] [21856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:44.158Z] [runtime-status] [21856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-05-26T23:55:44.159Z] [runtime-status] [21856] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
-[debug] [2023-05-26T23:55:44.583Z] [runtime-status] [21856] Functions runtime initialized. {"cwd":"C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions","node_version":"18.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\gusta\\\\Workspace\\\\Projetos\\\\Personal\\\\chatgpt_backend_test\\\\functions\",\"node_version\":\"18.15.0\"}"}}
-[debug] [2023-05-26T23:55:44.584Z] [runtime-status] [21856] Listening to port: \\?\pipe\fire_emu_3ad185ea75538d3d {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21856] Listening to port: \\\\?\\pipe\\fire_emu_3ad185ea75538d3d"}}
-[debug] [2023-05-26T23:55:44.657Z] [worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: IDLE"}}
-[debug] [2023-05-26T23:55:44.658Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
-[info] i  functions: Beginning execution of "us-central1-app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"us-central1-app\""}}
-[debug] [2023-05-26T23:55:44.659Z] [worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: BUSY"}}
-[info] i  functions: Finished "us-central1-app" in 895.2306ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"us-central1-app\" in 895.2306ms"}}
-[debug] [2023-05-26T23:55:45.555Z] [worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: IDLE"}}
-[debug] [2023-05-26T23:55:45.556Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[info] >  node:events:491 {"user":"node:events:491\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m node:events:491\r"}}
-[info] >        throw er; // Unhandled 'error' event {"user":"      throw er; // Unhandled 'error' event\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m       throw er; // Unhandled 'error' event\r"}}
-[info] >        ^ {"user":"      ^\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m       ^\r"}}
-[info] >   {"user":"\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m \r"}}
-[info] >  Error: Connection lost: The server closed the connection. {"user":"Error: Connection lost: The server closed the connection.\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m Error: Connection lost: The server closed the connection.\r"}}
-[info] >      at Protocol.end (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\protocol\Protocol.js:112:13) {"user":"    at Protocol.end (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:112:13)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Protocol.end (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:112:13)\r"}}
-[info] >      at Socket.<anonymous> (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\Connection.js:94:28) {"user":"    at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:94:28)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:94:28)\r"}}
-[info] >      at Socket.<anonymous> (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\Connection.js:526:10) {"user":"    at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:526:10)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:526:10)\r"}}
-[info] >      at Socket.emit (node:events:525:35) {"user":"    at Socket.emit (node:events:525:35)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Socket.emit (node:events:525:35)\r"}}
-[info] >      at endReadableNT (node:internal/streams/readable:1359:12) {"user":"    at endReadableNT (node:internal/streams/readable:1359:12)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at endReadableNT (node:internal/streams/readable:1359:12)\r"}}
-[info] >      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {"user":"    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\r"}}
-[info] >  Emitted 'error' event on Connection instance at: {"user":"Emitted 'error' event on Connection instance at:\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m Emitted 'error' event on Connection instance at:\r"}}
-[info] >      at Connection._handleProtocolError (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\Connection.js:423:8) {"user":"    at Connection._handleProtocolError (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:423:8)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Connection._handleProtocolError (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:423:8)\r"}}
-[info] >      at Protocol.emit (node:events:513:28) {"user":"    at Protocol.emit (node:events:513:28)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Protocol.emit (node:events:513:28)\r"}}
-[info] >      at Protocol._delegateError (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\protocol\Protocol.js:398:10) {"user":"    at Protocol._delegateError (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:398:10)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Protocol._delegateError (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:398:10)\r"}}
-[info] >      at Protocol.end (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\protocol\Protocol.js:116:8) {"user":"    at Protocol.end (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:116:8)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Protocol.end (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\protocol\\Protocol.js:116:8)\r"}}
-[info] >      at Socket.<anonymous> (C:\Users\gusta\Workspace\Projetos\Personal\chatgpt_backend_test\functions\node_modules\mysql\lib\Connection.js:94:28) {"user":"    at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:94:28)\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Socket.<anonymous> (C:\\Users\\gusta\\Workspace\\Projetos\\Personal\\chatgpt_backend_test\\functions\\node_modules\\mysql\\lib\\Connection.js:94:28)\r"}}
-[info] >      [... lines matching original stack trace ...] {"user":"    [... lines matching original stack trace ...]\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     [... lines matching original stack trace ...]\r"}}
-[info] >      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) { {"user":"    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {\r"}}
-[info] >    fatal: true, {"user":"  fatal: true,\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m   fatal: true,\r"}}
-[info] >    code: 'PROTOCOL_CONNECTION_LOST' {"user":"  code: 'PROTOCOL_CONNECTION_LOST'\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m   code: 'PROTOCOL_CONNECTION_LOST'\r"}}
-[info] >  } {"user":"}\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m }\r"}}
-[info] >   {"user":"\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m \r"}}
-[info] >  Node.js v18.15.0 {"user":"Node.js v18.15.0\r","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v18.15.0\r"}}
-[debug] [2023-05-26T23:56:45.428Z] [worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: exited"}}
-[debug] [2023-05-26T23:56:45.428Z] [worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[worker-us-central1-app-1a91982a-b6ee-4041-8817-1eb1507e61fe]: FINISHED"}}

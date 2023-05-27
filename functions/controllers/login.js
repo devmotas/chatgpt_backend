@@ -27,11 +27,7 @@ exports.login = (req, res) => {
     if (user.password !== password) {
       return res.status(400).json({message: "E-mail ou senha inválidos."});
     }
-    // Criar uma sessão para o usuário
-    req.session.userId = user.id;
 
-    user.token = "Sem token";
-    delete user.password;
     return res.status(200).json({message: "Login realizado com sucesso.", user: user});
   });
 };
