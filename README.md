@@ -43,7 +43,17 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver suge
 
 ## Importante: Arquivo .env
 
-O arquivo `.env` contém variáveis de ambiente sensíveis e não deve ser compartilhado publicamente no GitHub ou em qualquer plataforma de controle de versão. Certifique-se de adicionar o arquivo `.env` ao seu arquivo `.gitignore` para evitar o envio acidental para o repositório.
+O arquivo `.env` não está presente. Ele é necessário para utilizar o projeto completamente. Entre em contato para obter acesso ao arquivo `.env` e seguir as instruções abaixo para configurá-lo corretamente.
+
+1. Crie um arquivo chamado `.env` dentro da pasta functions.
+2. Copie o conteúdo fornecido por e-mail (ou outro meio de comunicação) para o arquivo `.env`.
+3. Preencha as variáveis de ambiente com os valores apropriados no arquivo `.env`.
+
+Certifique-se de não compartilhar o arquivo `.env` publicamente no GitHub ou em qualquer outra plataforma de controle de versão, pois ele pode conter informações sensíveis.
+
+Se você não tiver acesso ao arquivo `.env`, entre em contato conosco pelo seguinte meio:
+
+*   Email: devgustavomota@gmail.com
 
 ## Contato
 
