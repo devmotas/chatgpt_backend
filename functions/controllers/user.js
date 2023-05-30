@@ -107,7 +107,7 @@ exports.deleteUser = (req, res) => {
     const userExists = results[0].count > 0;
     if (!userExists) {
       db.end();
-      return res.status(404).json("Usuário não encontrado.");
+      return res.status(500).json("Usuário não encontrado.");
     }
 
     // Deleta o usuário
@@ -172,4 +172,34 @@ exports.updatePassword = (req, res) => {
   });
 };
 
+exports.updateAuthorization = (req, res) => {
+  const db = mysql.createConnection(process.env.DATABASE_URL);
+  console.log("Connected to PlanetScale!");
+  const q = "SELECT authorization FROM users WHERE id=?";
+  const values = [req.params.id];
+  db.query(q, values, (err, results) => {
+    if (err) {
+      console.error(err);
+      db.end();
+      return res.json(err);
+    }
+    const user = results[0];
+    if (!user) {
+      db.end();
+      return res.status(404).json("Usuário não encontrado.");
+    }
+    const {authorization} = req.body;
 
+    const qUpdate = "UPDATE users SET authorization=? WHERE id=?";
+    const valuesUpdate = [authorization, req.params.id];
+    db.query(qUpdate, valuesUpdate, (err) => {
+      if (err) {
+        console.error(err);
+        db.end();
+        return res.json(err);
+      }
+      db.end();
+      return res.status(200).json("Autorização atualizada com sucesso.");
+    });
+  });
+};

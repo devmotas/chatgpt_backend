@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const axios = require("axios");
 
 exports.chat = async (req, res) => {
@@ -25,10 +26,13 @@ const generateImage = async (req, res) => {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${apiKey}`,
   };
+  const words = prompt.split(" ");
+  words.shift();
+  const modifiedPrompt = words.join(" ");
   const body = {
-    prompt: prompt,
+    prompt: modifiedPrompt,
     n: 1,
-    size: "1024x1024",
+    size: "512x512",
   };
 
   try {
@@ -38,7 +42,7 @@ const generateImage = async (req, res) => {
     return {data: imageUrl, type: "image"};
   } catch (error) {
     console.error(error);
-    throw new Error("Internal Server Error");
+    return res.status(500).json({message: "Erro ao processar resposta!.", erro: error});
   }
 };
 
@@ -52,7 +56,7 @@ const processText = async (req, res) => {
   const body = {
     model: "text-davinci-003",
     prompt: prompt,
-    max_tokens: 200,
+    max_tokens: 1000,
     temperature: 0.9,
   };
 
