@@ -72,10 +72,11 @@ exports.updateUser = (req, res) => {
   console.log("Connected to PlanetScale!");
 
 
-  const q = "UPDATE users SET name=?, email=? WHERE id=?";
+  const q = "UPDATE users SET name=?, email=?, profile_image=? WHERE id=?";
   const values = [
     req.body.name,
     req.body.email,
+    req.body.profile_image,
   ];
   db.query(q, [...values, req.params.id], (err) => {
     if (err) {
