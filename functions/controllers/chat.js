@@ -3,11 +3,11 @@ const axios = require("axios");
 
 exports.chat = async (req, res) => {
   try {
-    const { prompt, language } = req.body;
+    const {prompt, language} = req.body;
 
     // Verificar se o prompt existe e é uma string
     if (!prompt || typeof prompt !== "string") {
-      return res.status(400).json({ message: "O campo 'prompt' é obrigatório e deve ser uma string." });
+      return res.status(400).json({message: "O campo 'prompt' é obrigatório e deve ser uma string."});
     }
 
     // Definir o idioma padrão como pt-br, se não especificado
@@ -25,13 +25,13 @@ exports.chat = async (req, res) => {
 
     return res.status(200).json(response);
   } catch (error) {
-    return res.status(500).json({ message: "Internal Server Error", error: error.message });
+    return res.status(500).json({message: "Internal Server Error", error: error.message});
   }
 };
 
 const generateImage = async (req, res) => {
   try {
-    const { apiKey, prompt } = req.body;
+    const {apiKey, prompt} = req.body;
 
     if (!apiKey || typeof apiKey !== "string") {
       throw new Error("A chave da API (apiKey) é obrigatória e deve ser uma string.");
@@ -55,18 +55,18 @@ const generateImage = async (req, res) => {
       size: "512x512",
     };
 
-    const response = await axios.post("https://api.openai.com/v1/images/generations", body, { headers });
+    const response = await axios.post("https://api.openai.com/v1/images/generations", body, {headers});
     const imageUrl = response.data.data[0].url;
 
-    return { data: imageUrl, type: "image" };
+    return {data: imageUrl, type: "image"};
   } catch (error) {
-    return res.status(500).json({ message: "Erro ao processar resposta!", error: error.message });
+    return res.status(500).json({message: "Erro ao processar resposta!", error: error.message});
   }
 };
 
 const processText = async (req, res, lang) => {
   try {
-    const { apiKey, prompt } = req.body;
+    const {apiKey, prompt} = req.body;
 
     if (!apiKey || typeof apiKey !== "string") {
       throw new Error("A chave da API (apiKey) é obrigatória e deve ser uma string.");
@@ -84,17 +84,17 @@ const processText = async (req, res, lang) => {
     const body = {
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "user", content: `Responda no idioma: ${lang}. ${prompt}` }
+        {role: "user", content: `Responda no idioma: ${lang}. ${prompt}`},
       ],
       max_tokens: 100,
       temperature: 0.7,
       top_p: 1,
     };
 
-    const response = await axios.post("https://api.openai.com/v1/chat/completions", body, { headers });
+    const response = await axios.post("https://api.openai.com/v1/chat/completions", body, {headers});
     const trimmedText = response.data.choices[0].message.content.trim();
 
-    return { data: trimmedText, type: "text" };
+    return {data: trimmedText, type: "text"};
   } catch (error) {
     throw new Error("Erro ao processar texto: " + error.message);
   }
